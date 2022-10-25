@@ -1,0 +1,16 @@
+/* 
+ Given one array and a size, write a function that chunks the array into 
+ subarray of that given size. 
+ E.g  chunkArray([1,2,3,4,5, 6], 2) // should return [[1,2], [3,4], [5,6]]
+*/
+
+function chunkArray(array, size) {
+    const chunks = [];
+
+    for(let i=0; i<array.length/size; i++){
+        chunks.push(array.slice(i*size, (i+1)*size))
+    }
+    
+    return chunks
+}
+
